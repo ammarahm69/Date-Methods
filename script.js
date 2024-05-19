@@ -32,7 +32,31 @@ function dat(){
     }
 }
 dat();
+let now = new Date();
+console.log(now);
+let given = new Date(`1 Jan 1970`);
+console.log(given); 
+let milliseconds = now - given;
+console.log(milliseconds + ' miliseconds');
 
+let minutes = milliseconds / (1000 * 60);
+console.log(minutes + ' minutes'); 
+
+let hours = now.getHours(); // Get the current hour (0-23)
+
+if (hours < 12) {
+    console.log(("It's AM"));
+} else {
+    console.log(("It's PM"));
+}
+
+let present = new Date();
+// console.log(present); 
+let passed = new Date('18 June 2015');
+// console.log(passed); 
+let milli = present - passed;
+let days = milli / (1000 * 60 * 60 * 24);
+console.log(Math.round(days) + ' days have passed since 2015 1st Ramadan'); 
 
 
 
